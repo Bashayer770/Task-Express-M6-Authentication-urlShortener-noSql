@@ -20,6 +20,8 @@ const generateToken = (user) => {
 
 exports.signin = async (req, res) => {
   try {
+    const token = await generateToken(req.user);
+    res.status(200).json(token);
   } catch (err) {
     res.status(500).json("Server Error");
   }
