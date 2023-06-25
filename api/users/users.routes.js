@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const jwtStrategy = require("jwtStartegy");
 const router = express.Router();
 
 const { signup, signin, getUsers } = require("./users.controllers");
